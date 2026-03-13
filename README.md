@@ -24,3 +24,4 @@ Array juga digunakan untuk menentukan jumlah mahasiswa yang lulus dan tidak lulu
 Dari program yang telah dibuat dapat disimpulkan bahwa penggunaan array sangat penting dalam pengolahan data. Dengan menggunakan array, data nilai mahasiswa dapat disimpan dalam satu struktur yang terorganisir sehingga proses pencarian nilai, perhitungan rata-rata, serta analisis kelulusan dapat dilakukan dengan lebih efisien dan sistematis.
 
 
+# 2. Screenshot hasil eksekusi
