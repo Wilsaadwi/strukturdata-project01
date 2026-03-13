@@ -25,3 +25,5 @@ Dari program yang telah dibuat dapat disimpulkan bahwa penggunaan array sangat p
 
 
 # 2. Screenshot hasil eksekusi
+![image](https://github.com/Wilsaadwi/strukturdata-project01/blob/b3e05e4745f984d67fec354a7f3cc667d6013c1c/eksekusi1.png)
+![image]()
