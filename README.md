@@ -31,6 +31,7 @@ Dari program yang telah dibuat dapat disimpulkan bahwa penggunaan array sangat p
 # 3. Analisis Kompleksitas
 # **Analisis Kompleksitas Sistem**
 Program ini digunakan untuk mengolah nilai mahasiswa menggunakan struktur data list (array) di Phyton. Di dalam program terdapat beberapa proses utama seperti menginputkan nilai, mencari nilai tertinggi dan nilai terendah, menghitung rata-rata, serta menghitung jumlah mahasiswa yang lulus. Setiap proses memiliki kompleksitas waktu yang berbeda tergantung dari jumlah data yang diproses.
+
 **1. Proses input nilai mahasiswa**
 
 Pada bagian ini, program menggunakan perulangan for untuk memasukkan 10 nilai mahasiswa ke dalam list *nilai_mhs*
