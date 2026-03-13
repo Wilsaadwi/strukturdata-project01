@@ -36,6 +36,78 @@ Program ini digunakan untuk mengolah nilai mahasiswa menggunakan struktur data l
 
 Pada bagian ini, program menggunakan perulangan for untuk memasukkan 10 nilai mahasiswa ke dalam list *nilai_mhs*
 
+```python
 for i in range(10):
-    nilai = int(input(" Masukkan Nilai Mahasiswa ke-{} : ".format(i+1)))
+    nilai = int(input("Masukkan Nilai Mahasiswa ke-{} : ".format(i+1)))
     nilai_mhs.append(nilai)
+```
+Perulangan tersebut berjalan sebanyak jumlah data yang dimasukkan. Jika jumlah mahasiswa dilambangkan dengan n, maka proses input akan dilakukan sebanyak n kali. Karena jumlah langkah bergantung pada banyaknya data, maka kompleksitas waktunya adalah O(n).
+
+**2. Proses mencari nilai tertinggi dan terendah**
+
+Pada program ini, nilai tertinggi dan terendah dicari menggunakan fungsi max() dan min().
+```python
+nilai_tertinggi = max(nilai_mhs)
+nilai_terendah = min(nilai_mhs)
+```
+Fungsi tersebut bekerja dengan cara memeriksa seluruh elemen dalam list. Oleh karena itu, kompleksitas waktunya juga O(n) karena semua nilai harus dibandingkan untuk mendapatkan nilai maksimum dan minimum.
+
+Setelah itu terdapat perulangan lagi:
+```python
+for n in nilai_mhs:
+    if n > nilai_tertinggi:
+        nilai_tertinggi = n
+    elif n < nilai_terendah:
+        nilai_terendah = n
+```
+Perulangan ini juga memeriksa seluruh elemen list sehingga kompleksitasnya tetap O(n).
+
+**3. Proses menghitung rata-rata nilai**
+
+Rata-rata dihitung dengan menjumlahkan seluruh nilai terlebih dahulu kemudian dibagi dengan jumlah data.
+```python
+total_nilai = sum(nilai_mhs)
+
+for n in nilai_mhs:
+    total_nilai += n
+```
+Fungsi *sum()* akan menjumlahkan semua elemen pada list sehingga kompleksitasnya O(n). Selain itu, terdapat perulangan yang kembali menjumlahkan seluruh nilai dalam list. Karena perulangan tersebut jugas membaca semua data satu per satu, maka kompleksitasnya juga O(n).
+
+Dengan demikian, proses perhitungan rata-rata secara keseluruhan masih termasuk dalam kompleksitas O(n).
+
+**4. Proses menghitung jumlah mahasiswa lulus**
+
+Program memeriksa setiap nilai untuk menentukan apakah mahasiswa tersebut lulus atau tidak dengan syarat nilai ≥ 60.
+```python
+for n in nilai_mhs:
+    if n >= 60:
+        jumlah_lulus += 1
+    else:
+        jumlah_tidak_lulus += 1
+```
+Perulangan ini mengecek seluruh elemen pada list satu per satu. Karena seluruh data harus diperiksa, maka kompleksitas waktunya adalah O(n).
+
+**5. Proses pembuatan grafik**
+
+Grafik dibuat menggunakan library **matplotlib**.
+```python
+grafik.barh(kategori, nilai)
+grafik.pie(data, labels=label, autopct='%1.0f%%')
+```
+Pada bagian ini data yang digunakan hanya dua kategori yaitu nilai tertinggi dan terendah serta jumlah mahasiswa lulus dan tidak lulus. Karena jumlah datanya tetap dan tidak bergantung pada banyaknya nilai mahasiswa, maka kompleksitasnya dapat dianggap O(1) atau konstan.
+
+**Kesimpulan**
+
+Dari beberapa proses yang dilakukan dalam program ini dapat disimpulkan bahwa sebagian besar operasi memiliki kompleksitas O(n). Hal ini disebabkan karena program harus membaca atau memproses seluruh elemen dalam list nilai mahasiswa untuk melakukan perhitungan seperti mencari nilai tertinggi, menghitung rata-rata, serta menentukan jumlah mahasiswa yang lulus.
+
+Dengan kompleksitas O(n), program masih tergolong efisien untuk jumlah data yang cukup besar karena waktu eksekusinya bertambah secara linear mengikuti jumlah data yang diproses.
+
+# 4. Refleksi pembelajaran
+
+Pada proyek ini saya belajar bagaimana mengolah data nilai mahasiswa menggunakan bahasa Python dengan memanfaatkan struktur data array (list). Dari tugas ini saya jadi lebih memahami bahwa array sangat membantu ketika kita ingin menyimpan banyak data dalam satu variabel, sehingga data tersebut bisa diproses dengan mudah.
+
+Saat mengerjakan program ini saya juga belajar menggunakan perulangan untuk membaca setiap data yang ada di dalam array. Dari situ saya bisa mencari nilai tertinggi, nilai terendah, menghitung rata-rata nilai, serta menentukan jumlah mahasiswa yang lulus dan tidak lulus. Sebelumnya saya hanya memahami konsep array secara teori, tetapi melalui tugas ini saya bisa melihat langsung bagaimana konsep tersebut digunakan dalam sebuah program.
+
+Selama mengerjakan proyek ini saya juga sempat mengalami beberapa kesulitan, terutama saat membuat grafik menggunakan library matplotlib dan saat mencoba menghubungkan hasil program dari Google Colab ke GitHub. Pada awalnya saya cukup bingung karena belum terbiasa menggunakan kedua tools tersebut. Namun setelah mencoba beberapa kali dan mencari tahu cara penggunaannya, akhirnya saya bisa menjalankan program dengan baik dan menampilkan grafik dari data yang sudah diolah.
+
+Dari tugas ini saya merasa pemahaman saya tentang penggunaan array dan perulangan menjadi lebih baik. Selain itu, saya juga belajar bahwa visualisasi data dengan grafik dapat membantu kita melihat hasil analisis data dengan lebih jelas. Melalui proyek ini saya jadi lebih mengerti bagaimana konsep yang dipelajari di materi struktur data bisa diterapkan langsung dalam pembuatan program sederhana.
